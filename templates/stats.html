@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Match Stats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Stats</h1>
+    {% if total == 0 %}
+        <p>No matches recorded yet.</p>
+    {% else %}
+        <p>Total matches: {{ total }}</p>
+        <p>Wins: {{ wins }} | Losses: {{ losses }} | Win %: {{ win_percent }}%</p>
+        <p>Average Winners per Match: {{ avg_winners }}</p>
+        <p>Average Unforced Errors per Match: {{ avg_unforced_errors }}</p>
+        <p>Average Aces per Match: {{ avg_aces }}</p>
+        <p>Average Double Faults per Match: {{ avg_double_faults }}</p>
+        <p>Most Common Opponent: {{ common_opp }}</p>
+    {% endif %}
+    <br>
+    <a href="/">Add another match</a>
+</body>
+</html>

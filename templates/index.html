@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Match</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Add Tennis Match</h1>
+    <form method="POST" action="/add">
+        Opponent: <input type="text" name="opponent" required><br><br>
+        Result (W/L): <input type="text" name="result" required><br><br>
+        Winners: <input type="number" name="winners" required><br><br>
+        Unforced errors: <input type="number" name="unforced_errors" required><br><br>
+        Aces: <input type="number" name="aces" required><br><br>
+        Double Faults: <input type="number" name="double_faults" required><br><br>
+        <button type="submit">Add Match</button>
+    </form>
+    <br>
+    <a href="/stats">View Stats</a>
+</body>
+</html>
